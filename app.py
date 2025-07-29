@@ -3,4 +3,4 @@
 
 
 if__name__=="__main__":
-    print(greet("Ahmad"))
+    print(greet("Ahamad"))

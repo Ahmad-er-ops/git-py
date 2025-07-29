@@ -1,0 +1,25 @@
+
+name: Python CI
+
+# 🔁 When should this workflow run?
+on: 
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Runs on a virtual Linux machine provided by GitHub
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4  # Downloads your repo code into GitHub runner
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'  # Set version of Python
+
+      - name: Run Python script
+        run: python app.py  # Executes your Python file (like running in terminal)
+
+
